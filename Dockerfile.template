@@ -1,0 +1,8 @@
+FROM REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE
+LABEL maintainer "Anirban Mukhopadhyay <anirban.mukhop@gmail.com>"
+
+ARG RUST_VERSION=1.41.0
+
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain ${RUST_VERSION}
+
+ENV PATH /home/circleci/.cargo/bin:$PATH
