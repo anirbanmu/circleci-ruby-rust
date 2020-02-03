@@ -17,8 +17,7 @@ build-defaults: &build-defaults
           RB3="rb$RUBY_VERSION"
           RS3="rs$RUST_VERSION"
           sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:$RUBY_VERSION/" Dockerfile.template > Dockerfile
-          docker build -t $IMAGE_NAME:$RB2-$RS2 -t $IMAGE_NAME:$RB2-$RS3 -t $IMAGE_NAME:$RB3-$RS2 -t $IMAGE_NAME:$RB3-$RS3 .
-          if [ -z "$TAG_LATEST" ]; then docker tag $IMAGE_NAME:rb$RUBY_VERSION-rs$RUST_VERSION $IMAGE_NAME:latest ; else echo "not latest"; fi
+          docker build -t $IMAGE_NAME:$RB2-$RS2 -t $IMAGE_NAME:$RB2-$RS3 -t $IMAGE_NAME:$RB3-$RS2 -t $IMAGE_NAME:$RB3-$RS3 --build-arg rust_version="$RUST_VERSION" .
     - run:
         name: Publish Docker Image to Docker Hub
         command: |
@@ -28,10 +27,10 @@ build-defaults: &build-defaults
           RS2="rs$RSVER2"
           RB3="rb$RUBY_VERSION"
           RS3="rs$RUST_VERSION"
-          docker login -u "$DOCKERHUB_USERNAME" -p "$DOCKERHUB_ACCESS_TOKEN"
+          echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
 
-          if [ -z "$TAG_LATEST" ]; then docker tag $IMAGE_NAME:rb$RUBY_VERSION-rs$RUST_VERSION $IMAGE_NAME:latest ; else echo "not tagging latest"; fi
-          if [ -z "$TAG_LATEST" ]; then docker push $IMAGE_NAME:latest ; else echo "not pushing latest"; fi
+          if [ -z "$TAG_LATEST" ]; then echo "not tagging latest" ; else docker tag $IMAGE_NAME:rb$RUBY_VERSION-rs$RUST_VERSION $IMAGE_NAME:latest ; fi
+          if [ -z "$TAG_LATEST" ]; then echo "not pushing latest" ; else docker push $IMAGE_NAME:latest ; fi
 
           docker push $IMAGE_NAME:$RB2-$RS2
           docker push $IMAGE_NAME:$RB2-$RS3
