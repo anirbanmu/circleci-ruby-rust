@@ -84,7 +84,7 @@ IMAGE_NAME = 'anirbanmu/circleci-ruby-rust'
 
 def generate_job_yaml(rb, rs, tags)
   build_command = [
-    'sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:' + rb.full + '/ "Dockerfile.template > Dockerfile',
+    'sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:' + rb.full + '/" Dockerfile.template > Dockerfile',
     'docker build -t ' + tags.map { |t| "#{IMAGE_NAME}:#{t}" }.join(' -t ') + " --build-arg rust_version=\"#{rs.full}\" ."
   ].join("\n")
 

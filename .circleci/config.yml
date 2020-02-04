@@ -11,7 +11,7 @@ jobs:
     - run:
         name: Build Docker image
         command: |-
-          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.7.0/ "Dockerfile.template > Dockerfile
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.7.0/" Dockerfile.template > Dockerfile
           docker build -t anirbanmu/circleci-ruby-rust:rb2.7.0-rs1.41.0 -t anirbanmu/circleci-ruby-rust:rb2.7-rs1.41.0 -t anirbanmu/circleci-ruby-rust:rb2.7.0-rs1.41 -t anirbanmu/circleci-ruby-rust:rb2.7-rs1.41 -t anirbanmu/circleci-ruby-rust:latest --build-arg rust_version="1.41.0" .
     - run:
         name: Publish Docker image to Docker Hub
@@ -31,7 +31,7 @@ jobs:
     - run:
         name: Build Docker image
         command: |-
-          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.7.0/ "Dockerfile.template > Dockerfile
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.7.0/" Dockerfile.template > Dockerfile
           docker build -t anirbanmu/circleci-ruby-rust:rb2.7.0-rs1.40.0 -t anirbanmu/circleci-ruby-rust:rb2.7-rs1.40.0 -t anirbanmu/circleci-ruby-rust:rb2.7.0-rs1.40 -t anirbanmu/circleci-ruby-rust:rb2.7-rs1.40 --build-arg rust_version="1.40.0" .
     - run:
         name: Publish Docker image to Docker Hub
@@ -50,7 +50,7 @@ jobs:
     - run:
         name: Build Docker image
         command: |-
-          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.7.0/ "Dockerfile.template > Dockerfile
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.7.0/" Dockerfile.template > Dockerfile
           docker build -t anirbanmu/circleci-ruby-rust:rb2.7.0-rs1.39.0 -t anirbanmu/circleci-ruby-rust:rb2.7-rs1.39.0 -t anirbanmu/circleci-ruby-rust:rb2.7.0-rs1.39 -t anirbanmu/circleci-ruby-rust:rb2.7-rs1.39 --build-arg rust_version="1.39.0" .
     - run:
         name: Publish Docker image to Docker Hub
@@ -69,7 +69,7 @@ jobs:
     - run:
         name: Build Docker image
         command: |-
-          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.7.0/ "Dockerfile.template > Dockerfile
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.7.0/" Dockerfile.template > Dockerfile
           docker build -t anirbanmu/circleci-ruby-rust:rb2.7.0-rs1.38.0 -t anirbanmu/circleci-ruby-rust:rb2.7-rs1.38.0 -t anirbanmu/circleci-ruby-rust:rb2.7.0-rs1.38 -t anirbanmu/circleci-ruby-rust:rb2.7-rs1.38 --build-arg rust_version="1.38.0" .
     - run:
         name: Publish Docker image to Docker Hub
@@ -88,7 +88,7 @@ jobs:
     - run:
         name: Build Docker image
         command: |-
-          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.6.5/ "Dockerfile.template > Dockerfile
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.6.5/" Dockerfile.template > Dockerfile
           docker build -t anirbanmu/circleci-ruby-rust:rb2.6.5-rs1.41.0 -t anirbanmu/circleci-ruby-rust:rb2.6-rs1.41.0 -t anirbanmu/circleci-ruby-rust:rb2.6.5-rs1.41 -t anirbanmu/circleci-ruby-rust:rb2.6-rs1.41 --build-arg rust_version="1.41.0" .
     - run:
         name: Publish Docker image to Docker Hub
@@ -107,7 +107,7 @@ jobs:
     - run:
         name: Build Docker image
         command: |-
-          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.6.5/ "Dockerfile.template > Dockerfile
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.6.5/" Dockerfile.template > Dockerfile
           docker build -t anirbanmu/circleci-ruby-rust:rb2.6.5-rs1.40.0 -t anirbanmu/circleci-ruby-rust:rb2.6-rs1.40.0 -t anirbanmu/circleci-ruby-rust:rb2.6.5-rs1.40 -t anirbanmu/circleci-ruby-rust:rb2.6-rs1.40 --build-arg rust_version="1.40.0" .
     - run:
         name: Publish Docker image to Docker Hub
@@ -126,7 +126,7 @@ jobs:
     - run:
         name: Build Docker image
         command: |-
-          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.6.5/ "Dockerfile.template > Dockerfile
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.6.5/" Dockerfile.template > Dockerfile
           docker build -t anirbanmu/circleci-ruby-rust:rb2.6.5-rs1.39.0 -t anirbanmu/circleci-ruby-rust:rb2.6-rs1.39.0 -t anirbanmu/circleci-ruby-rust:rb2.6.5-rs1.39 -t anirbanmu/circleci-ruby-rust:rb2.6-rs1.39 --build-arg rust_version="1.39.0" .
     - run:
         name: Publish Docker image to Docker Hub
@@ -145,7 +145,7 @@ jobs:
     - run:
         name: Build Docker image
         command: |-
-          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.6.5/ "Dockerfile.template > Dockerfile
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.6.5/" Dockerfile.template > Dockerfile
           docker build -t anirbanmu/circleci-ruby-rust:rb2.6.5-rs1.38.0 -t anirbanmu/circleci-ruby-rust:rb2.6-rs1.38.0 -t anirbanmu/circleci-ruby-rust:rb2.6.5-rs1.38 -t anirbanmu/circleci-ruby-rust:rb2.6-rs1.38 --build-arg rust_version="1.38.0" .
     - run:
         name: Publish Docker image to Docker Hub
@@ -164,7 +164,7 @@ jobs:
     - run:
         name: Build Docker image
         command: |-
-          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.5.7/ "Dockerfile.template > Dockerfile
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.5.7/" Dockerfile.template > Dockerfile
           docker build -t anirbanmu/circleci-ruby-rust:rb2.5.7-rs1.41.0 -t anirbanmu/circleci-ruby-rust:rb2.5-rs1.41.0 -t anirbanmu/circleci-ruby-rust:rb2.5.7-rs1.41 -t anirbanmu/circleci-ruby-rust:rb2.5-rs1.41 --build-arg rust_version="1.41.0" .
     - run:
         name: Publish Docker image to Docker Hub
@@ -183,7 +183,7 @@ jobs:
     - run:
         name: Build Docker image
         command: |-
-          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.5.7/ "Dockerfile.template > Dockerfile
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.5.7/" Dockerfile.template > Dockerfile
           docker build -t anirbanmu/circleci-ruby-rust:rb2.5.7-rs1.40.0 -t anirbanmu/circleci-ruby-rust:rb2.5-rs1.40.0 -t anirbanmu/circleci-ruby-rust:rb2.5.7-rs1.40 -t anirbanmu/circleci-ruby-rust:rb2.5-rs1.40 --build-arg rust_version="1.40.0" .
     - run:
         name: Publish Docker image to Docker Hub
@@ -202,7 +202,7 @@ jobs:
     - run:
         name: Build Docker image
         command: |-
-          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.5.7/ "Dockerfile.template > Dockerfile
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.5.7/" Dockerfile.template > Dockerfile
           docker build -t anirbanmu/circleci-ruby-rust:rb2.5.7-rs1.39.0 -t anirbanmu/circleci-ruby-rust:rb2.5-rs1.39.0 -t anirbanmu/circleci-ruby-rust:rb2.5.7-rs1.39 -t anirbanmu/circleci-ruby-rust:rb2.5-rs1.39 --build-arg rust_version="1.39.0" .
     - run:
         name: Publish Docker image to Docker Hub
@@ -221,7 +221,7 @@ jobs:
     - run:
         name: Build Docker image
         command: |-
-          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.5.7/ "Dockerfile.template > Dockerfile
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.5.7/" Dockerfile.template > Dockerfile
           docker build -t anirbanmu/circleci-ruby-rust:rb2.5.7-rs1.38.0 -t anirbanmu/circleci-ruby-rust:rb2.5-rs1.38.0 -t anirbanmu/circleci-ruby-rust:rb2.5.7-rs1.38 -t anirbanmu/circleci-ruby-rust:rb2.5-rs1.38 --build-arg rust_version="1.38.0" .
     - run:
         name: Publish Docker image to Docker Hub
@@ -240,7 +240,7 @@ jobs:
     - run:
         name: Build Docker image
         command: |-
-          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.4.9/ "Dockerfile.template > Dockerfile
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.4.9/" Dockerfile.template > Dockerfile
           docker build -t anirbanmu/circleci-ruby-rust:rb2.4.9-rs1.41.0 -t anirbanmu/circleci-ruby-rust:rb2.4-rs1.41.0 -t anirbanmu/circleci-ruby-rust:rb2.4.9-rs1.41 -t anirbanmu/circleci-ruby-rust:rb2.4-rs1.41 --build-arg rust_version="1.41.0" .
     - run:
         name: Publish Docker image to Docker Hub
@@ -259,7 +259,7 @@ jobs:
     - run:
         name: Build Docker image
         command: |-
-          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.4.9/ "Dockerfile.template > Dockerfile
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.4.9/" Dockerfile.template > Dockerfile
           docker build -t anirbanmu/circleci-ruby-rust:rb2.4.9-rs1.40.0 -t anirbanmu/circleci-ruby-rust:rb2.4-rs1.40.0 -t anirbanmu/circleci-ruby-rust:rb2.4.9-rs1.40 -t anirbanmu/circleci-ruby-rust:rb2.4-rs1.40 --build-arg rust_version="1.40.0" .
     - run:
         name: Publish Docker image to Docker Hub
@@ -278,7 +278,7 @@ jobs:
     - run:
         name: Build Docker image
         command: |-
-          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.4.9/ "Dockerfile.template > Dockerfile
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.4.9/" Dockerfile.template > Dockerfile
           docker build -t anirbanmu/circleci-ruby-rust:rb2.4.9-rs1.39.0 -t anirbanmu/circleci-ruby-rust:rb2.4-rs1.39.0 -t anirbanmu/circleci-ruby-rust:rb2.4.9-rs1.39 -t anirbanmu/circleci-ruby-rust:rb2.4-rs1.39 --build-arg rust_version="1.39.0" .
     - run:
         name: Publish Docker image to Docker Hub
@@ -297,7 +297,7 @@ jobs:
     - run:
         name: Build Docker image
         command: |-
-          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.4.9/ "Dockerfile.template > Dockerfile
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.4.9/" Dockerfile.template > Dockerfile
           docker build -t anirbanmu/circleci-ruby-rust:rb2.4.9-rs1.38.0 -t anirbanmu/circleci-ruby-rust:rb2.4-rs1.38.0 -t anirbanmu/circleci-ruby-rust:rb2.4.9-rs1.38 -t anirbanmu/circleci-ruby-rust:rb2.4-rs1.38 --build-arg rust_version="1.38.0" .
     - run:
         name: Publish Docker image to Docker Hub
@@ -316,7 +316,7 @@ jobs:
     - run:
         name: Build Docker image
         command: |-
-          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.3.8/ "Dockerfile.template > Dockerfile
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.3.8/" Dockerfile.template > Dockerfile
           docker build -t anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.41.0 -t anirbanmu/circleci-ruby-rust:rb2.3-rs1.41.0 -t anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.41 -t anirbanmu/circleci-ruby-rust:rb2.3-rs1.41 --build-arg rust_version="1.41.0" .
     - run:
         name: Publish Docker image to Docker Hub
@@ -335,7 +335,7 @@ jobs:
     - run:
         name: Build Docker image
         command: |-
-          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.3.8/ "Dockerfile.template > Dockerfile
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.3.8/" Dockerfile.template > Dockerfile
           docker build -t anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.40.0 -t anirbanmu/circleci-ruby-rust:rb2.3-rs1.40.0 -t anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.40 -t anirbanmu/circleci-ruby-rust:rb2.3-rs1.40 --build-arg rust_version="1.40.0" .
     - run:
         name: Publish Docker image to Docker Hub
@@ -354,7 +354,7 @@ jobs:
     - run:
         name: Build Docker image
         command: |-
-          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.3.8/ "Dockerfile.template > Dockerfile
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.3.8/" Dockerfile.template > Dockerfile
           docker build -t anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.39.0 -t anirbanmu/circleci-ruby-rust:rb2.3-rs1.39.0 -t anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.39 -t anirbanmu/circleci-ruby-rust:rb2.3-rs1.39 --build-arg rust_version="1.39.0" .
     - run:
         name: Publish Docker image to Docker Hub
@@ -373,7 +373,7 @@ jobs:
     - run:
         name: Build Docker image
         command: |-
-          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.3.8/ "Dockerfile.template > Dockerfile
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.3.8/" Dockerfile.template > Dockerfile
           docker build -t anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.38.0 -t anirbanmu/circleci-ruby-rust:rb2.3-rs1.38.0 -t anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.38 -t anirbanmu/circleci-ruby-rust:rb2.3-rs1.38 --build-arg rust_version="1.38.0" .
     - run:
         name: Publish Docker image to Docker Hub
@@ -392,7 +392,7 @@ jobs:
     - run:
         name: Build Docker image
         command: |-
-          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.2.9/ "Dockerfile.template > Dockerfile
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.2.9/" Dockerfile.template > Dockerfile
           docker build -t anirbanmu/circleci-ruby-rust:rb2.2.9-rs1.41.0 -t anirbanmu/circleci-ruby-rust:rb2.2-rs1.41.0 -t anirbanmu/circleci-ruby-rust:rb2.2.9-rs1.41 -t anirbanmu/circleci-ruby-rust:rb2.2-rs1.41 --build-arg rust_version="1.41.0" .
     - run:
         name: Publish Docker image to Docker Hub
@@ -411,7 +411,7 @@ jobs:
     - run:
         name: Build Docker image
         command: |-
-          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.2.9/ "Dockerfile.template > Dockerfile
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.2.9/" Dockerfile.template > Dockerfile
           docker build -t anirbanmu/circleci-ruby-rust:rb2.2.9-rs1.40.0 -t anirbanmu/circleci-ruby-rust:rb2.2-rs1.40.0 -t anirbanmu/circleci-ruby-rust:rb2.2.9-rs1.40 -t anirbanmu/circleci-ruby-rust:rb2.2-rs1.40 --build-arg rust_version="1.40.0" .
     - run:
         name: Publish Docker image to Docker Hub
@@ -430,7 +430,7 @@ jobs:
     - run:
         name: Build Docker image
         command: |-
-          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.2.9/ "Dockerfile.template > Dockerfile
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.2.9/" Dockerfile.template > Dockerfile
           docker build -t anirbanmu/circleci-ruby-rust:rb2.2.9-rs1.39.0 -t anirbanmu/circleci-ruby-rust:rb2.2-rs1.39.0 -t anirbanmu/circleci-ruby-rust:rb2.2.9-rs1.39 -t anirbanmu/circleci-ruby-rust:rb2.2-rs1.39 --build-arg rust_version="1.39.0" .
     - run:
         name: Publish Docker image to Docker Hub
@@ -449,7 +449,7 @@ jobs:
     - run:
         name: Build Docker image
         command: |-
-          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.2.9/ "Dockerfile.template > Dockerfile
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.2.9/" Dockerfile.template > Dockerfile
           docker build -t anirbanmu/circleci-ruby-rust:rb2.2.9-rs1.38.0 -t anirbanmu/circleci-ruby-rust:rb2.2-rs1.38.0 -t anirbanmu/circleci-ruby-rust:rb2.2.9-rs1.38 -t anirbanmu/circleci-ruby-rust:rb2.2-rs1.38 --build-arg rust_version="1.38.0" .
     - run:
         name: Publish Docker image to Docker Hub
