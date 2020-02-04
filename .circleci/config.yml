@@ -4,7 +4,7 @@ version: 2
 jobs:
   rb2.7.0-rs1.41.0:
     docker:
-      image: circleci/buildpack-deps
+    - image: circleci/buildpack-deps
     steps:
     - checkout
     - setup_remote_docker
@@ -24,7 +24,7 @@ jobs:
           docker push anirbanmu/circleci-ruby-rust:latest
   rb2.7.0-rs1.40.0:
     docker:
-      image: circleci/buildpack-deps
+    - image: circleci/buildpack-deps
     steps:
     - checkout
     - setup_remote_docker
@@ -43,7 +43,7 @@ jobs:
           docker push anirbanmu/circleci-ruby-rust:rb2.7-rs1.40
   rb2.7.0-rs1.39.0:
     docker:
-      image: circleci/buildpack-deps
+    - image: circleci/buildpack-deps
     steps:
     - checkout
     - setup_remote_docker
@@ -62,7 +62,7 @@ jobs:
           docker push anirbanmu/circleci-ruby-rust:rb2.7-rs1.39
   rb2.7.0-rs1.38.0:
     docker:
-      image: circleci/buildpack-deps
+    - image: circleci/buildpack-deps
     steps:
     - checkout
     - setup_remote_docker
@@ -81,7 +81,7 @@ jobs:
           docker push anirbanmu/circleci-ruby-rust:rb2.7-rs1.38
   rb2.6.5-rs1.41.0:
     docker:
-      image: circleci/buildpack-deps
+    - image: circleci/buildpack-deps
     steps:
     - checkout
     - setup_remote_docker
@@ -100,7 +100,7 @@ jobs:
           docker push anirbanmu/circleci-ruby-rust:rb2.6-rs1.41
   rb2.6.5-rs1.40.0:
     docker:
-      image: circleci/buildpack-deps
+    - image: circleci/buildpack-deps
     steps:
     - checkout
     - setup_remote_docker
@@ -119,7 +119,7 @@ jobs:
           docker push anirbanmu/circleci-ruby-rust:rb2.6-rs1.40
   rb2.6.5-rs1.39.0:
     docker:
-      image: circleci/buildpack-deps
+    - image: circleci/buildpack-deps
     steps:
     - checkout
     - setup_remote_docker
@@ -138,7 +138,7 @@ jobs:
           docker push anirbanmu/circleci-ruby-rust:rb2.6-rs1.39
   rb2.6.5-rs1.38.0:
     docker:
-      image: circleci/buildpack-deps
+    - image: circleci/buildpack-deps
     steps:
     - checkout
     - setup_remote_docker
@@ -157,7 +157,7 @@ jobs:
           docker push anirbanmu/circleci-ruby-rust:rb2.6-rs1.38
   rb2.5.7-rs1.41.0:
     docker:
-      image: circleci/buildpack-deps
+    - image: circleci/buildpack-deps
     steps:
     - checkout
     - setup_remote_docker
@@ -176,7 +176,7 @@ jobs:
           docker push anirbanmu/circleci-ruby-rust:rb2.5-rs1.41
   rb2.5.7-rs1.40.0:
     docker:
-      image: circleci/buildpack-deps
+    - image: circleci/buildpack-deps
     steps:
     - checkout
     - setup_remote_docker
@@ -195,7 +195,7 @@ jobs:
           docker push anirbanmu/circleci-ruby-rust:rb2.5-rs1.40
   rb2.5.7-rs1.39.0:
     docker:
-      image: circleci/buildpack-deps
+    - image: circleci/buildpack-deps
     steps:
     - checkout
     - setup_remote_docker
@@ -214,7 +214,7 @@ jobs:
           docker push anirbanmu/circleci-ruby-rust:rb2.5-rs1.39
   rb2.5.7-rs1.38.0:
     docker:
-      image: circleci/buildpack-deps
+    - image: circleci/buildpack-deps
     steps:
     - checkout
     - setup_remote_docker
@@ -233,7 +233,7 @@ jobs:
           docker push anirbanmu/circleci-ruby-rust:rb2.5-rs1.38
   rb2.4.9-rs1.41.0:
     docker:
-      image: circleci/buildpack-deps
+    - image: circleci/buildpack-deps
     steps:
     - checkout
     - setup_remote_docker
@@ -252,7 +252,7 @@ jobs:
           docker push anirbanmu/circleci-ruby-rust:rb2.4-rs1.41
   rb2.4.9-rs1.40.0:
     docker:
-      image: circleci/buildpack-deps
+    - image: circleci/buildpack-deps
     steps:
     - checkout
     - setup_remote_docker
@@ -271,7 +271,7 @@ jobs:
           docker push anirbanmu/circleci-ruby-rust:rb2.4-rs1.40
   rb2.4.9-rs1.39.0:
     docker:
-      image: circleci/buildpack-deps
+    - image: circleci/buildpack-deps
     steps:
     - checkout
     - setup_remote_docker
@@ -290,7 +290,7 @@ jobs:
           docker push anirbanmu/circleci-ruby-rust:rb2.4-rs1.39
   rb2.4.9-rs1.38.0:
     docker:
-      image: circleci/buildpack-deps
+    - image: circleci/buildpack-deps
     steps:
     - checkout
     - setup_remote_docker
@@ -309,7 +309,7 @@ jobs:
           docker push anirbanmu/circleci-ruby-rust:rb2.4-rs1.38
   rb2.3.8-rs1.41.0:
     docker:
-      image: circleci/buildpack-deps
+    - image: circleci/buildpack-deps
     steps:
     - checkout
     - setup_remote_docker
@@ -328,7 +328,7 @@ jobs:
           docker push anirbanmu/circleci-ruby-rust:rb2.3-rs1.41
   rb2.3.8-rs1.40.0:
     docker:
-      image: circleci/buildpack-deps
+    - image: circleci/buildpack-deps
     steps:
     - checkout
     - setup_remote_docker
@@ -347,7 +347,7 @@ jobs:
           docker push anirbanmu/circleci-ruby-rust:rb2.3-rs1.40
   rb2.3.8-rs1.39.0:
     docker:
-      image: circleci/buildpack-deps
+    - image: circleci/buildpack-deps
     steps:
     - checkout
     - setup_remote_docker
@@ -366,7 +366,7 @@ jobs:
           docker push anirbanmu/circleci-ruby-rust:rb2.3-rs1.39
   rb2.3.8-rs1.38.0:
     docker:
-      image: circleci/buildpack-deps
+    - image: circleci/buildpack-deps
     steps:
     - checkout
     - setup_remote_docker
@@ -385,7 +385,7 @@ jobs:
           docker push anirbanmu/circleci-ruby-rust:rb2.3-rs1.38
   rb2.2.9-rs1.41.0:
     docker:
-      image: circleci/buildpack-deps
+    - image: circleci/buildpack-deps
     steps:
     - checkout
     - setup_remote_docker
@@ -404,7 +404,7 @@ jobs:
           docker push anirbanmu/circleci-ruby-rust:rb2.2-rs1.41
   rb2.2.9-rs1.40.0:
     docker:
-      image: circleci/buildpack-deps
+    - image: circleci/buildpack-deps
     steps:
     - checkout
     - setup_remote_docker
@@ -423,7 +423,7 @@ jobs:
           docker push anirbanmu/circleci-ruby-rust:rb2.2-rs1.40
   rb2.2.9-rs1.39.0:
     docker:
-      image: circleci/buildpack-deps
+    - image: circleci/buildpack-deps
     steps:
     - checkout
     - setup_remote_docker
@@ -442,7 +442,7 @@ jobs:
           docker push anirbanmu/circleci-ruby-rust:rb2.2-rs1.39
   rb2.2.9-rs1.38.0:
     docker:
-      image: circleci/buildpack-deps
+    - image: circleci/buildpack-deps
     steps:
     - checkout
     - setup_remote_docker

@@ -94,7 +94,7 @@ def generate_job_yaml(rb, rs, tags)
   ].join("\n")
 
   {
-    'docker' => { 'image' => 'circleci/buildpack-deps' },
+    'docker' => [{ 'image' => 'circleci/buildpack-deps' }],
     'steps' => [
       'checkout',
       'setup_remote_docker',
