@@ -1,167 +1,561 @@
-environment-defaults: &environment-defaults
-  IMAGE_NAME: anirbanmu/circleci-ruby-rust
-
-build-defaults: &build-defaults
-  docker:
-    - image: circleci/buildpack-deps
-  steps:
+# THIS IS A GENERATED FILE. DO NOT EDIT MANUALLY. EDIT ../versions.yml & RUN ../gen_circle_config.rb TO REGENERATE.
+---
+version: 2
+jobs:
+  rb2.7.0-rs1.41.0:
+    docker:
+      image: circleci/buildpack-deps
+    steps:
     - checkout
     - setup_remote_docker
     - run:
         name: Build Docker image
-        command: |
-          RBVER2="$(echo "$RUBY_VERSION" | cut -d. -f1-2)"
-          RB2="rb$RBVER2"
-          RSVER2="$(echo "$RUST_VERSION" | cut -d. -f1-2)"
-          RS2="rs$RSVER2"
-          RB3="rb$RUBY_VERSION"
-          RS3="rs$RUST_VERSION"
-          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:$RUBY_VERSION/" Dockerfile.template > Dockerfile
-          docker build -t $IMAGE_NAME:$RB2-$RS2 -t $IMAGE_NAME:$RB2-$RS3 -t $IMAGE_NAME:$RB3-$RS2 -t $IMAGE_NAME:$RB3-$RS3 --build-arg rust_version="$RUST_VERSION" .
+        command: |-
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.7.0/ "Dockerfile.template > Dockerfile
+          docker build -t anirbanmu/circleci-ruby-rust:rb2.7.0-rs1.41.0 -t anirbanmu/circleci-ruby-rust:rb2.7-rs1.41.0 -t anirbanmu/circleci-ruby-rust:rb2.7.0-rs1.41 -t anirbanmu/circleci-ruby-rust:rb2.7-rs1.41 -t anirbanmu/circleci-ruby-rust:latest --build-arg rust_version="1.41.0" .
     - run:
-        name: Publish Docker Image to Docker Hub
-        command: |
-          RBVER2="$(echo "$RUBY_VERSION" | cut -d. -f1-2)"
-          RB2="rb$RBVER2"
-          RSVER2="$(echo "$RUST_VERSION" | cut -d. -f1-2)"
-          RS2="rs$RSVER2"
-          RB3="rb$RUBY_VERSION"
-          RS3="rs$RUST_VERSION"
+        name: Publish Docker image to Docker Hub
+        command: |-
           echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
-
-          if [ -z "$TAG_LATEST" ]; then echo "not tagging latest" ; else docker tag $IMAGE_NAME:rb$RUBY_VERSION-rs$RUST_VERSION $IMAGE_NAME:latest ; fi
-          if [ -z "$TAG_LATEST" ]; then echo "not pushing latest" ; else docker push $IMAGE_NAME:latest ; fi
-
-          docker push $IMAGE_NAME:$RB2-$RS2
-          docker push $IMAGE_NAME:$RB2-$RS3
-          docker push $IMAGE_NAME:$RB3-$RS2
-          docker push $IMAGE_NAME:$RB3-$RS3
-
-version: 2
-jobs:
-  rb2.7.0-rs1.41.0:
-    <<: *build-defaults
-    environment:
-      <<: *environment-defaults
-      RUBY_VERSION: 2.7.0
-      RUST_VERSION: 1.41.0
-      TAG_LATEST: true
+          docker push anirbanmu/circleci-ruby-rust:rb2.7.0-rs1.41.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.7-rs1.41.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.7.0-rs1.41
+          docker push anirbanmu/circleci-ruby-rust:rb2.7-rs1.41
+          docker push anirbanmu/circleci-ruby-rust:latest
   rb2.7.0-rs1.40.0:
-    <<: *build-defaults
-    environment:
-      <<: *environment-defaults
-      RUBY_VERSION: 2.7.0
-      RUST_VERSION: 1.40.0
+    docker:
+      image: circleci/buildpack-deps
+    steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: Build Docker image
+        command: |-
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.7.0/ "Dockerfile.template > Dockerfile
+          docker build -t anirbanmu/circleci-ruby-rust:rb2.7.0-rs1.40.0 -t anirbanmu/circleci-ruby-rust:rb2.7-rs1.40.0 -t anirbanmu/circleci-ruby-rust:rb2.7.0-rs1.40 -t anirbanmu/circleci-ruby-rust:rb2.7-rs1.40 --build-arg rust_version="1.40.0" .
+    - run:
+        name: Publish Docker image to Docker Hub
+        command: |-
+          echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+          docker push anirbanmu/circleci-ruby-rust:rb2.7.0-rs1.40.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.7-rs1.40.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.7.0-rs1.40
+          docker push anirbanmu/circleci-ruby-rust:rb2.7-rs1.40
+  rb2.7.0-rs1.39.0:
+    docker:
+      image: circleci/buildpack-deps
+    steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: Build Docker image
+        command: |-
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.7.0/ "Dockerfile.template > Dockerfile
+          docker build -t anirbanmu/circleci-ruby-rust:rb2.7.0-rs1.39.0 -t anirbanmu/circleci-ruby-rust:rb2.7-rs1.39.0 -t anirbanmu/circleci-ruby-rust:rb2.7.0-rs1.39 -t anirbanmu/circleci-ruby-rust:rb2.7-rs1.39 --build-arg rust_version="1.39.0" .
+    - run:
+        name: Publish Docker image to Docker Hub
+        command: |-
+          echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+          docker push anirbanmu/circleci-ruby-rust:rb2.7.0-rs1.39.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.7-rs1.39.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.7.0-rs1.39
+          docker push anirbanmu/circleci-ruby-rust:rb2.7-rs1.39
+  rb2.7.0-rs1.38.0:
+    docker:
+      image: circleci/buildpack-deps
+    steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: Build Docker image
+        command: |-
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.7.0/ "Dockerfile.template > Dockerfile
+          docker build -t anirbanmu/circleci-ruby-rust:rb2.7.0-rs1.38.0 -t anirbanmu/circleci-ruby-rust:rb2.7-rs1.38.0 -t anirbanmu/circleci-ruby-rust:rb2.7.0-rs1.38 -t anirbanmu/circleci-ruby-rust:rb2.7-rs1.38 --build-arg rust_version="1.38.0" .
+    - run:
+        name: Publish Docker image to Docker Hub
+        command: |-
+          echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+          docker push anirbanmu/circleci-ruby-rust:rb2.7.0-rs1.38.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.7-rs1.38.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.7.0-rs1.38
+          docker push anirbanmu/circleci-ruby-rust:rb2.7-rs1.38
   rb2.6.5-rs1.41.0:
-    <<: *build-defaults
-    environment:
-      <<: *environment-defaults
-      RUBY_VERSION: 2.6.5
-      RUST_VERSION: 1.41.0
+    docker:
+      image: circleci/buildpack-deps
+    steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: Build Docker image
+        command: |-
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.6.5/ "Dockerfile.template > Dockerfile
+          docker build -t anirbanmu/circleci-ruby-rust:rb2.6.5-rs1.41.0 -t anirbanmu/circleci-ruby-rust:rb2.6-rs1.41.0 -t anirbanmu/circleci-ruby-rust:rb2.6.5-rs1.41 -t anirbanmu/circleci-ruby-rust:rb2.6-rs1.41 --build-arg rust_version="1.41.0" .
+    - run:
+        name: Publish Docker image to Docker Hub
+        command: |-
+          echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+          docker push anirbanmu/circleci-ruby-rust:rb2.6.5-rs1.41.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.6-rs1.41.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.6.5-rs1.41
+          docker push anirbanmu/circleci-ruby-rust:rb2.6-rs1.41
   rb2.6.5-rs1.40.0:
-    <<: *build-defaults
-    environment:
-      <<: *environment-defaults
-      RUBY_VERSION: 2.6.5
-      RUST_VERSION: 1.40.0
+    docker:
+      image: circleci/buildpack-deps
+    steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: Build Docker image
+        command: |-
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.6.5/ "Dockerfile.template > Dockerfile
+          docker build -t anirbanmu/circleci-ruby-rust:rb2.6.5-rs1.40.0 -t anirbanmu/circleci-ruby-rust:rb2.6-rs1.40.0 -t anirbanmu/circleci-ruby-rust:rb2.6.5-rs1.40 -t anirbanmu/circleci-ruby-rust:rb2.6-rs1.40 --build-arg rust_version="1.40.0" .
+    - run:
+        name: Publish Docker image to Docker Hub
+        command: |-
+          echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+          docker push anirbanmu/circleci-ruby-rust:rb2.6.5-rs1.40.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.6-rs1.40.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.6.5-rs1.40
+          docker push anirbanmu/circleci-ruby-rust:rb2.6-rs1.40
+  rb2.6.5-rs1.39.0:
+    docker:
+      image: circleci/buildpack-deps
+    steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: Build Docker image
+        command: |-
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.6.5/ "Dockerfile.template > Dockerfile
+          docker build -t anirbanmu/circleci-ruby-rust:rb2.6.5-rs1.39.0 -t anirbanmu/circleci-ruby-rust:rb2.6-rs1.39.0 -t anirbanmu/circleci-ruby-rust:rb2.6.5-rs1.39 -t anirbanmu/circleci-ruby-rust:rb2.6-rs1.39 --build-arg rust_version="1.39.0" .
+    - run:
+        name: Publish Docker image to Docker Hub
+        command: |-
+          echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+          docker push anirbanmu/circleci-ruby-rust:rb2.6.5-rs1.39.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.6-rs1.39.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.6.5-rs1.39
+          docker push anirbanmu/circleci-ruby-rust:rb2.6-rs1.39
+  rb2.6.5-rs1.38.0:
+    docker:
+      image: circleci/buildpack-deps
+    steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: Build Docker image
+        command: |-
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.6.5/ "Dockerfile.template > Dockerfile
+          docker build -t anirbanmu/circleci-ruby-rust:rb2.6.5-rs1.38.0 -t anirbanmu/circleci-ruby-rust:rb2.6-rs1.38.0 -t anirbanmu/circleci-ruby-rust:rb2.6.5-rs1.38 -t anirbanmu/circleci-ruby-rust:rb2.6-rs1.38 --build-arg rust_version="1.38.0" .
+    - run:
+        name: Publish Docker image to Docker Hub
+        command: |-
+          echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+          docker push anirbanmu/circleci-ruby-rust:rb2.6.5-rs1.38.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.6-rs1.38.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.6.5-rs1.38
+          docker push anirbanmu/circleci-ruby-rust:rb2.6-rs1.38
   rb2.5.7-rs1.41.0:
-    <<: *build-defaults
-    environment:
-      <<: *environment-defaults
-      RUBY_VERSION: 2.5.7
-      RUST_VERSION: 1.41.0
+    docker:
+      image: circleci/buildpack-deps
+    steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: Build Docker image
+        command: |-
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.5.7/ "Dockerfile.template > Dockerfile
+          docker build -t anirbanmu/circleci-ruby-rust:rb2.5.7-rs1.41.0 -t anirbanmu/circleci-ruby-rust:rb2.5-rs1.41.0 -t anirbanmu/circleci-ruby-rust:rb2.5.7-rs1.41 -t anirbanmu/circleci-ruby-rust:rb2.5-rs1.41 --build-arg rust_version="1.41.0" .
+    - run:
+        name: Publish Docker image to Docker Hub
+        command: |-
+          echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+          docker push anirbanmu/circleci-ruby-rust:rb2.5.7-rs1.41.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.5-rs1.41.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.5.7-rs1.41
+          docker push anirbanmu/circleci-ruby-rust:rb2.5-rs1.41
   rb2.5.7-rs1.40.0:
-    <<: *build-defaults
-    environment:
-      <<: *environment-defaults
-      RUBY_VERSION: 2.5.7
-      RUST_VERSION: 1.40.0
+    docker:
+      image: circleci/buildpack-deps
+    steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: Build Docker image
+        command: |-
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.5.7/ "Dockerfile.template > Dockerfile
+          docker build -t anirbanmu/circleci-ruby-rust:rb2.5.7-rs1.40.0 -t anirbanmu/circleci-ruby-rust:rb2.5-rs1.40.0 -t anirbanmu/circleci-ruby-rust:rb2.5.7-rs1.40 -t anirbanmu/circleci-ruby-rust:rb2.5-rs1.40 --build-arg rust_version="1.40.0" .
+    - run:
+        name: Publish Docker image to Docker Hub
+        command: |-
+          echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+          docker push anirbanmu/circleci-ruby-rust:rb2.5.7-rs1.40.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.5-rs1.40.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.5.7-rs1.40
+          docker push anirbanmu/circleci-ruby-rust:rb2.5-rs1.40
+  rb2.5.7-rs1.39.0:
+    docker:
+      image: circleci/buildpack-deps
+    steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: Build Docker image
+        command: |-
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.5.7/ "Dockerfile.template > Dockerfile
+          docker build -t anirbanmu/circleci-ruby-rust:rb2.5.7-rs1.39.0 -t anirbanmu/circleci-ruby-rust:rb2.5-rs1.39.0 -t anirbanmu/circleci-ruby-rust:rb2.5.7-rs1.39 -t anirbanmu/circleci-ruby-rust:rb2.5-rs1.39 --build-arg rust_version="1.39.0" .
+    - run:
+        name: Publish Docker image to Docker Hub
+        command: |-
+          echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+          docker push anirbanmu/circleci-ruby-rust:rb2.5.7-rs1.39.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.5-rs1.39.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.5.7-rs1.39
+          docker push anirbanmu/circleci-ruby-rust:rb2.5-rs1.39
+  rb2.5.7-rs1.38.0:
+    docker:
+      image: circleci/buildpack-deps
+    steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: Build Docker image
+        command: |-
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.5.7/ "Dockerfile.template > Dockerfile
+          docker build -t anirbanmu/circleci-ruby-rust:rb2.5.7-rs1.38.0 -t anirbanmu/circleci-ruby-rust:rb2.5-rs1.38.0 -t anirbanmu/circleci-ruby-rust:rb2.5.7-rs1.38 -t anirbanmu/circleci-ruby-rust:rb2.5-rs1.38 --build-arg rust_version="1.38.0" .
+    - run:
+        name: Publish Docker image to Docker Hub
+        command: |-
+          echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+          docker push anirbanmu/circleci-ruby-rust:rb2.5.7-rs1.38.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.5-rs1.38.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.5.7-rs1.38
+          docker push anirbanmu/circleci-ruby-rust:rb2.5-rs1.38
   rb2.4.9-rs1.41.0:
-    <<: *build-defaults
-    environment:
-      <<: *environment-defaults
-      RUBY_VERSION: 2.4.9
-      RUST_VERSION: 1.41.0
+    docker:
+      image: circleci/buildpack-deps
+    steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: Build Docker image
+        command: |-
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.4.9/ "Dockerfile.template > Dockerfile
+          docker build -t anirbanmu/circleci-ruby-rust:rb2.4.9-rs1.41.0 -t anirbanmu/circleci-ruby-rust:rb2.4-rs1.41.0 -t anirbanmu/circleci-ruby-rust:rb2.4.9-rs1.41 -t anirbanmu/circleci-ruby-rust:rb2.4-rs1.41 --build-arg rust_version="1.41.0" .
+    - run:
+        name: Publish Docker image to Docker Hub
+        command: |-
+          echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+          docker push anirbanmu/circleci-ruby-rust:rb2.4.9-rs1.41.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.4-rs1.41.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.4.9-rs1.41
+          docker push anirbanmu/circleci-ruby-rust:rb2.4-rs1.41
   rb2.4.9-rs1.40.0:
-    <<: *build-defaults
-    environment:
-      <<: *environment-defaults
-      RUBY_VERSION: 2.4.9
-      RUST_VERSION: 1.40.0
+    docker:
+      image: circleci/buildpack-deps
+    steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: Build Docker image
+        command: |-
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.4.9/ "Dockerfile.template > Dockerfile
+          docker build -t anirbanmu/circleci-ruby-rust:rb2.4.9-rs1.40.0 -t anirbanmu/circleci-ruby-rust:rb2.4-rs1.40.0 -t anirbanmu/circleci-ruby-rust:rb2.4.9-rs1.40 -t anirbanmu/circleci-ruby-rust:rb2.4-rs1.40 --build-arg rust_version="1.40.0" .
+    - run:
+        name: Publish Docker image to Docker Hub
+        command: |-
+          echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+          docker push anirbanmu/circleci-ruby-rust:rb2.4.9-rs1.40.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.4-rs1.40.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.4.9-rs1.40
+          docker push anirbanmu/circleci-ruby-rust:rb2.4-rs1.40
+  rb2.4.9-rs1.39.0:
+    docker:
+      image: circleci/buildpack-deps
+    steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: Build Docker image
+        command: |-
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.4.9/ "Dockerfile.template > Dockerfile
+          docker build -t anirbanmu/circleci-ruby-rust:rb2.4.9-rs1.39.0 -t anirbanmu/circleci-ruby-rust:rb2.4-rs1.39.0 -t anirbanmu/circleci-ruby-rust:rb2.4.9-rs1.39 -t anirbanmu/circleci-ruby-rust:rb2.4-rs1.39 --build-arg rust_version="1.39.0" .
+    - run:
+        name: Publish Docker image to Docker Hub
+        command: |-
+          echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+          docker push anirbanmu/circleci-ruby-rust:rb2.4.9-rs1.39.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.4-rs1.39.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.4.9-rs1.39
+          docker push anirbanmu/circleci-ruby-rust:rb2.4-rs1.39
+  rb2.4.9-rs1.38.0:
+    docker:
+      image: circleci/buildpack-deps
+    steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: Build Docker image
+        command: |-
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.4.9/ "Dockerfile.template > Dockerfile
+          docker build -t anirbanmu/circleci-ruby-rust:rb2.4.9-rs1.38.0 -t anirbanmu/circleci-ruby-rust:rb2.4-rs1.38.0 -t anirbanmu/circleci-ruby-rust:rb2.4.9-rs1.38 -t anirbanmu/circleci-ruby-rust:rb2.4-rs1.38 --build-arg rust_version="1.38.0" .
+    - run:
+        name: Publish Docker image to Docker Hub
+        command: |-
+          echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+          docker push anirbanmu/circleci-ruby-rust:rb2.4.9-rs1.38.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.4-rs1.38.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.4.9-rs1.38
+          docker push anirbanmu/circleci-ruby-rust:rb2.4-rs1.38
   rb2.3.8-rs1.41.0:
-    <<: *build-defaults
-    environment:
-      <<: *environment-defaults
-      RUBY_VERSION: 2.3.8
-      RUST_VERSION: 1.41.0
+    docker:
+      image: circleci/buildpack-deps
+    steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: Build Docker image
+        command: |-
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.3.8/ "Dockerfile.template > Dockerfile
+          docker build -t anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.41.0 -t anirbanmu/circleci-ruby-rust:rb2.3-rs1.41.0 -t anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.41 -t anirbanmu/circleci-ruby-rust:rb2.3-rs1.41 --build-arg rust_version="1.41.0" .
+    - run:
+        name: Publish Docker image to Docker Hub
+        command: |-
+          echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+          docker push anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.41.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.3-rs1.41.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.41
+          docker push anirbanmu/circleci-ruby-rust:rb2.3-rs1.41
   rb2.3.8-rs1.40.0:
-    <<: *build-defaults
-    environment:
-      <<: *environment-defaults
-      RUBY_VERSION: 2.3.8
-      RUST_VERSION: 1.40.0
+    docker:
+      image: circleci/buildpack-deps
+    steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: Build Docker image
+        command: |-
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.3.8/ "Dockerfile.template > Dockerfile
+          docker build -t anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.40.0 -t anirbanmu/circleci-ruby-rust:rb2.3-rs1.40.0 -t anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.40 -t anirbanmu/circleci-ruby-rust:rb2.3-rs1.40 --build-arg rust_version="1.40.0" .
+    - run:
+        name: Publish Docker image to Docker Hub
+        command: |-
+          echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+          docker push anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.40.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.3-rs1.40.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.40
+          docker push anirbanmu/circleci-ruby-rust:rb2.3-rs1.40
+  rb2.3.8-rs1.39.0:
+    docker:
+      image: circleci/buildpack-deps
+    steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: Build Docker image
+        command: |-
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.3.8/ "Dockerfile.template > Dockerfile
+          docker build -t anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.39.0 -t anirbanmu/circleci-ruby-rust:rb2.3-rs1.39.0 -t anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.39 -t anirbanmu/circleci-ruby-rust:rb2.3-rs1.39 --build-arg rust_version="1.39.0" .
+    - run:
+        name: Publish Docker image to Docker Hub
+        command: |-
+          echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+          docker push anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.39.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.3-rs1.39.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.39
+          docker push anirbanmu/circleci-ruby-rust:rb2.3-rs1.39
+  rb2.3.8-rs1.38.0:
+    docker:
+      image: circleci/buildpack-deps
+    steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: Build Docker image
+        command: |-
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.3.8/ "Dockerfile.template > Dockerfile
+          docker build -t anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.38.0 -t anirbanmu/circleci-ruby-rust:rb2.3-rs1.38.0 -t anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.38 -t anirbanmu/circleci-ruby-rust:rb2.3-rs1.38 --build-arg rust_version="1.38.0" .
+    - run:
+        name: Publish Docker image to Docker Hub
+        command: |-
+          echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+          docker push anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.38.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.3-rs1.38.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.38
+          docker push anirbanmu/circleci-ruby-rust:rb2.3-rs1.38
   rb2.2.9-rs1.41.0:
-    <<: *build-defaults
-    environment:
-      <<: *environment-defaults
-      RUBY_VERSION: 2.2.9
-      RUST_VERSION: 1.41.0
+    docker:
+      image: circleci/buildpack-deps
+    steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: Build Docker image
+        command: |-
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.2.9/ "Dockerfile.template > Dockerfile
+          docker build -t anirbanmu/circleci-ruby-rust:rb2.2.9-rs1.41.0 -t anirbanmu/circleci-ruby-rust:rb2.2-rs1.41.0 -t anirbanmu/circleci-ruby-rust:rb2.2.9-rs1.41 -t anirbanmu/circleci-ruby-rust:rb2.2-rs1.41 --build-arg rust_version="1.41.0" .
+    - run:
+        name: Publish Docker image to Docker Hub
+        command: |-
+          echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+          docker push anirbanmu/circleci-ruby-rust:rb2.2.9-rs1.41.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.2-rs1.41.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.2.9-rs1.41
+          docker push anirbanmu/circleci-ruby-rust:rb2.2-rs1.41
   rb2.2.9-rs1.40.0:
-    <<: *build-defaults
-    environment:
-      <<: *environment-defaults
-      RUBY_VERSION: 2.2.9
-      RUST_VERSION: 1.40.0
-
+    docker:
+      image: circleci/buildpack-deps
+    steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: Build Docker image
+        command: |-
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.2.9/ "Dockerfile.template > Dockerfile
+          docker build -t anirbanmu/circleci-ruby-rust:rb2.2.9-rs1.40.0 -t anirbanmu/circleci-ruby-rust:rb2.2-rs1.40.0 -t anirbanmu/circleci-ruby-rust:rb2.2.9-rs1.40 -t anirbanmu/circleci-ruby-rust:rb2.2-rs1.40 --build-arg rust_version="1.40.0" .
+    - run:
+        name: Publish Docker image to Docker Hub
+        command: |-
+          echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+          docker push anirbanmu/circleci-ruby-rust:rb2.2.9-rs1.40.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.2-rs1.40.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.2.9-rs1.40
+          docker push anirbanmu/circleci-ruby-rust:rb2.2-rs1.40
+  rb2.2.9-rs1.39.0:
+    docker:
+      image: circleci/buildpack-deps
+    steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: Build Docker image
+        command: |-
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.2.9/ "Dockerfile.template > Dockerfile
+          docker build -t anirbanmu/circleci-ruby-rust:rb2.2.9-rs1.39.0 -t anirbanmu/circleci-ruby-rust:rb2.2-rs1.39.0 -t anirbanmu/circleci-ruby-rust:rb2.2.9-rs1.39 -t anirbanmu/circleci-ruby-rust:rb2.2-rs1.39 --build-arg rust_version="1.39.0" .
+    - run:
+        name: Publish Docker image to Docker Hub
+        command: |-
+          echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+          docker push anirbanmu/circleci-ruby-rust:rb2.2.9-rs1.39.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.2-rs1.39.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.2.9-rs1.39
+          docker push anirbanmu/circleci-ruby-rust:rb2.2-rs1.39
+  rb2.2.9-rs1.38.0:
+    docker:
+      image: circleci/buildpack-deps
+    steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: Build Docker image
+        command: |-
+          sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:2.2.9/ "Dockerfile.template > Dockerfile
+          docker build -t anirbanmu/circleci-ruby-rust:rb2.2.9-rs1.38.0 -t anirbanmu/circleci-ruby-rust:rb2.2-rs1.38.0 -t anirbanmu/circleci-ruby-rust:rb2.2.9-rs1.38 -t anirbanmu/circleci-ruby-rust:rb2.2-rs1.38 --build-arg rust_version="1.38.0" .
+    - run:
+        name: Publish Docker image to Docker Hub
+        command: |-
+          echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+          docker push anirbanmu/circleci-ruby-rust:rb2.2.9-rs1.38.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.2-rs1.38.0
+          docker push anirbanmu/circleci-ruby-rust:rb2.2.9-rs1.38
+          docker push anirbanmu/circleci-ruby-rust:rb2.2-rs1.38
 workflows:
   version: 2
   build-master:
     jobs:
-      - rb2.7.0-rs1.41.0:
-          filters:
-            branches:
-              only: master
-      - rb2.7.0-rs1.40.0:
-          filters:
-            branches:
-              only: master
-      - rb2.6.5-rs1.41.0:
-          filters:
-            branches:
-              only: master
-      - rb2.6.5-rs1.40.0:
-          filters:
-            branches:
-              only: master
-      - rb2.5.7-rs1.41.0:
-          filters:
-            branches:
-              only: master
-      - rb2.5.7-rs1.40.0:
-          filters:
-            branches:
-              only: master
-      - rb2.4.9-rs1.41.0:
-          filters:
-            branches:
-              only: master
-      - rb2.4.9-rs1.40.0:
-          filters:
-            branches:
-              only: master
-      - rb2.3.8-rs1.41.0:
-          filters:
-            branches:
-              only: master
-      - rb2.3.8-rs1.40.0:
-          filters:
-            branches:
-              only: master
-      - rb2.2.9-rs1.41.0:
-          filters:
-            branches:
-              only: master
-      - rb2.2.9-rs1.40.0:
-          filters:
-            branches:
-              only: master
+    - rb2.7.0-rs1.41.0:
+        filters:
+          branches:
+            only: master
+    - rb2.7.0-rs1.40.0:
+        filters:
+          branches:
+            only: master
+    - rb2.7.0-rs1.39.0:
+        filters:
+          branches:
+            only: master
+    - rb2.7.0-rs1.38.0:
+        filters:
+          branches:
+            only: master
+    - rb2.6.5-rs1.41.0:
+        filters:
+          branches:
+            only: master
+    - rb2.6.5-rs1.40.0:
+        filters:
+          branches:
+            only: master
+    - rb2.6.5-rs1.39.0:
+        filters:
+          branches:
+            only: master
+    - rb2.6.5-rs1.38.0:
+        filters:
+          branches:
+            only: master
+    - rb2.5.7-rs1.41.0:
+        filters:
+          branches:
+            only: master
+    - rb2.5.7-rs1.40.0:
+        filters:
+          branches:
+            only: master
+    - rb2.5.7-rs1.39.0:
+        filters:
+          branches:
+            only: master
+    - rb2.5.7-rs1.38.0:
+        filters:
+          branches:
+            only: master
+    - rb2.4.9-rs1.41.0:
+        filters:
+          branches:
+            only: master
+    - rb2.4.9-rs1.40.0:
+        filters:
+          branches:
+            only: master
+    - rb2.4.9-rs1.39.0:
+        filters:
+          branches:
+            only: master
+    - rb2.4.9-rs1.38.0:
+        filters:
+          branches:
+            only: master
+    - rb2.3.8-rs1.41.0:
+        filters:
+          branches:
+            only: master
+    - rb2.3.8-rs1.40.0:
+        filters:
+          branches:
+            only: master
+    - rb2.3.8-rs1.39.0:
+        filters:
+          branches:
+            only: master
+    - rb2.3.8-rs1.38.0:
+        filters:
+          branches:
+            only: master
+    - rb2.2.9-rs1.41.0:
+        filters:
+          branches:
+            only: master
+    - rb2.2.9-rs1.40.0:
+        filters:
+          branches:
+            only: master
+    - rb2.2.9-rs1.39.0:
+        filters:
+          branches:
+            only: master
+    - rb2.2.9-rs1.38.0:
+        filters:
+          branches:
+            only: master
