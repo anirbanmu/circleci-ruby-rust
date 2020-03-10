@@ -3,6 +3,15 @@
 require 'yaml'
 require 'set'
 
+def deep_stringify_keys(element)
+  return element.map(&method(:deep_stringify_keys)) if element.is_a?(Array)
+  if element.is_a?(Hash)
+    return element.map { |k, v| [k.to_s, deep_stringify_keys(v)] }.to_h
+  end
+
+  element
+end
+
 class Version
   attr_reader :major, :minor, :patch
 
@@ -89,27 +98,16 @@ def generate_job_yaml(rb, rs, tags)
   ].join("\n")
 
   publish_command = [
-    'echo "$DOCKERHUB_ACCESS_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin',
+    'echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin',
     *tags.map { |t| "docker push #{IMAGE_NAME}:#{t}" }
   ].join("\n")
 
   {
-    'docker' => [{ 'image' => 'circleci/buildpack-deps' }],
-    'steps' => [
-      'checkout',
-      'setup_remote_docker',
-      {
-        'run' => {
-          'name' => 'Build Docker image',
-          'command' => build_command
-        }
-      },
-      {
-        'run' => {
-          'name' => 'Publish Docker image to Docker Hub',
-          'command' => publish_command
-        }
-      }
+    'runs-on': 'ubuntu-latest',
+    steps: [
+      { uses: 'actions/checkout@v2' },
+      { name: 'Build Docker image', run: build_command },
+      { name: 'Publish Docker image to Docker Hub', run: publish_command }
     ]
   }
 end
@@ -118,7 +116,7 @@ def job_name(rb, rs)
   "rb#{rb.full}-rs#{rs.full}"
 end
 
-def generate_circle_yaml(versions_path)
+def generate_github_workflow(versions_path)
   versions = YAML.safe_load(File.read(versions_path))
 
   ruby_versions = sorted_categorized_versions(Set.new(versions.dig('versions', 'ruby')))
@@ -127,25 +125,18 @@ def generate_circle_yaml(versions_path)
   image_versions = ruby_versions.product(rust_versions)
 
   {
-    'version' => 2,
-    'jobs' => image_versions.map do |(rb, rs)|
+    name: 'Build & Docker Hub push',
+    on: { push: { branches: ['master'] } },
+    jobs: image_versions.map do |(rb, rs)|
       tags = generate_rb_rs_tags(rb, rs)
       name = job_name(rb, rs)
-      [name, generate_job_yaml(rb, rs, tags)]
-    end.to_h,
-    'workflows' => {
-      'version' => 2,
-      'build-master' => {
-        'jobs' => image_versions.map do |(rb, rs)|
-          { job_name(rb, rs) => { 'filters' => { 'branches' => { 'only' => 'master' } } } }
-        end
-      }
-    }
-  }
+      [name.tr('.', '_'), generate_job_yaml(rb, rs, tags)]
+    end.to_h
+  }.then(&method(:deep_stringify_keys))
 end
 
-yaml_hash = generate_circle_yaml(File.expand_path(File.join(__dir__, 'versions.yml')))
-File.open(File.expand_path(File.join(__dir__, '.circleci', 'config.yml')), 'w') do |f|
-  f.puts("# THIS IS A GENERATED FILE. DO NOT EDIT MANUALLY. EDIT ../versions.yml & RUN ../gen_circle_config.rb TO REGENERATE.\n")
+yaml_hash = generate_github_workflow(File.expand_path(File.join(__dir__, 'versions.yml')))
+File.open(File.expand_path(File.join(__dir__, '.github', 'workflows', 'docker-hub.yml')), 'w') do |f|
+  f.puts("# THIS IS A GENERATED FILE. DO NOT EDIT MANUALLY. EDIT ../../versions.yml & RUN ../../gen_github_workflow.rb TO REGENERATE.\n")
   f.write(yaml_hash.to_yaml)
 end
