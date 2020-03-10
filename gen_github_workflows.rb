@@ -126,7 +126,7 @@ def generate_github_workflow(versions_path)
   image_versions = ruby_versions.product(rust_versions)
 
   {
-    name: 'Build & Docker Hub push',
+    name: 'build',
     on: { push: { branches: ['master'] } },
     jobs: image_versions.map do |(rb, rs)|
       tags = generate_rb_rs_tags(rb, rs)
