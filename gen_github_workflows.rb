@@ -99,7 +99,8 @@ def generate_job_yaml(rb, rs, tags)
 
   publish_command = [
     'echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin',
-    *tags.map { |t| "docker push #{IMAGE_NAME}:#{t}" }
+    *tags.map { |t| "docker push #{IMAGE_NAME}:#{t}" },
+    'docker logout'
   ].join("\n")
 
   {
