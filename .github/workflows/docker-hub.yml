@@ -1,6 +1,6 @@
 # THIS IS A GENERATED FILE. DO NOT EDIT MANUALLY. EDIT ../../versions.yml & RUN ../../gen_github_workflow.rb TO REGENERATE.
 ---
-name: Build & Docker Hub push
+name: build
 'on':
   push:
     branches:
