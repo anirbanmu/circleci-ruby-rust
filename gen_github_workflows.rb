@@ -96,7 +96,6 @@ def generate_job_yaml(rb, rs, tags)
 
   {
     'runs-on': 'ubuntu-latest',
-    concurrency: "ruby-#{rb.full}-concurrency-group",
     steps: [
       { uses: 'actions/checkout@v3' },
       { uses: 'docker/setup-qemu-action@v2' },
