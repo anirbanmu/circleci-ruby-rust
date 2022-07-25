@@ -92,23 +92,25 @@ end
 IMAGE_NAME = 'anirbanmu/circleci-ruby-rust'
 
 def generate_job_yaml(rb, rs, tags)
-  build_command = [
-    'sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:' + rb.full + '/" Dockerfile.template > Dockerfile',
-    'docker build -t ' + tags.map { |t| "#{IMAGE_NAME}:#{t}" }.join(' -t ') + " --build-arg rust_version=\"#{rs.full}\" ."
-  ].join("\n")
-
-  publish_command = [
-    'echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin',
-    *tags.map { |t| "docker push #{IMAGE_NAME}:#{t}" },
-    'docker logout'
-  ].join("\n")
+  generate_dockerfile_command = 'sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:' + rb.full + '/" Dockerfile.template > Dockerfile'
 
   {
     'runs-on': 'ubuntu-latest',
     steps: [
-      { uses: 'actions/checkout@v2' },
-      { name: 'Build Docker image', run: build_command },
-      { name: 'Publish Docker image to Docker Hub', run: publish_command }
+      { uses: 'actions/checkout@v3' },
+      { uses: 'docker/setup-qemu-action@v2' },
+      { uses: 'docker/setup-buildx-action@v2' },
+      { uses: 'docker/login-action@v2', with: { username: '${{ secrets.DOCKERHUB_USERNAME }}', password: '${{ secrets.DOCKERHUB_TOKEN }}' } },
+      { name: 'Generate dockerfile', run: generate_dockerfile_command },
+      {
+        uses: 'docker/build-push-action@v3',
+        with: {
+          context: '.',
+          push: true,
+          tags: tags.map { |t| "#{IMAGE_NAME}:#{t}" },
+          'build-args': ["rust_version=\"#{rs.full}\""]
+        }
+      }
     ]
   }
 end
