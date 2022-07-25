@@ -107,8 +107,8 @@ def generate_job_yaml(rb, rs, tags)
         with: {
           context: '.',
           push: true,
-          tags: tags.map { |t| "#{IMAGE_NAME}:#{t}" },
-          'build-args': ["rust_version=\"#{rs.full}\""]
+          tags: tags.map { |t| "#{IMAGE_NAME}:#{t}" }.join(','),
+          'build-args': "rust_version=\"#{rs.full}\""
         }
       }
     ]
