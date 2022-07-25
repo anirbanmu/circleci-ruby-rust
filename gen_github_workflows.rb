@@ -92,7 +92,7 @@ end
 IMAGE_NAME = 'anirbanmu/circleci-ruby-rust'
 
 def generate_job_yaml(rb, rs, tags)
-  generate_dockerfile_command = 'sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/circleci\/ruby:' + rb.full + '/" Dockerfile.template > Dockerfile'
+  generate_dockerfile_command = 'sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:' + rb.full + '/" Dockerfile.template > Dockerfile'
 
   {
     'runs-on': 'ubuntu-latest',
