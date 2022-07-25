@@ -8,6 +8,7 @@ name: build
 jobs:
   rb3_1_2-rs1_62_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.1.2-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -27,6 +28,7 @@ jobs:
         build-args: rust_version=1.62.1
   rb3_1_2-rs1_61_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.1.2-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -46,6 +48,7 @@ jobs:
         build-args: rust_version=1.61.0
   rb3_1_2-rs1_60_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.1.2-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -65,6 +68,7 @@ jobs:
         build-args: rust_version=1.60.0
   rb3_1_2-rs1_59_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.1.2-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -84,6 +88,7 @@ jobs:
         build-args: rust_version=1.59.0
   rb3_1_2-rs1_58_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.1.2-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -103,6 +108,7 @@ jobs:
         build-args: rust_version=1.58.1
   rb3_1_2-rs1_57_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.1.2-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -122,6 +128,7 @@ jobs:
         build-args: rust_version=1.57.0
   rb3_1_2-rs1_56_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.1.2-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -141,6 +148,7 @@ jobs:
         build-args: rust_version=1.56.1
   rb3_1_2-rs1_55_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.1.2-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -160,6 +168,7 @@ jobs:
         build-args: rust_version=1.55.0
   rb3_1_2-rs1_54_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.1.2-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -179,6 +188,7 @@ jobs:
         build-args: rust_version=1.54.0
   rb3_1_2-rs1_53_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.1.2-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -198,6 +208,7 @@ jobs:
         build-args: rust_version=1.53.0
   rb3_1_2-rs1_52_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.1.2-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -217,6 +228,7 @@ jobs:
         build-args: rust_version=1.52.1
   rb3_1_2-rs1_51_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.1.2-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -236,6 +248,7 @@ jobs:
         build-args: rust_version=1.51.0
   rb3_1_2-rs1_50_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.1.2-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -255,6 +268,7 @@ jobs:
         build-args: rust_version=1.50.0
   rb3_1_2-rs1_49_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.1.2-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -274,6 +288,7 @@ jobs:
         build-args: rust_version=1.49.0
   rb3_1_2-rs1_48_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.1.2-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -293,6 +308,7 @@ jobs:
         build-args: rust_version=1.48.0
   rb3_1_2-rs1_47_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.1.2-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -312,6 +328,7 @@ jobs:
         build-args: rust_version=1.47.0
   rb3_1_2-rs1_46_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.1.2-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -331,6 +348,7 @@ jobs:
         build-args: rust_version=1.46.0
   rb3_1_2-rs1_45_2:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.1.2-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -350,6 +368,7 @@ jobs:
         build-args: rust_version=1.45.2
   rb3_1_2-rs1_44_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.1.2-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -369,6 +388,7 @@ jobs:
         build-args: rust_version=1.44.1
   rb3_1_2-rs1_43_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.1.2-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -388,6 +408,7 @@ jobs:
         build-args: rust_version=1.43.1
   rb3_1_2-rs1_42_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.1.2-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -407,6 +428,7 @@ jobs:
         build-args: rust_version=1.42.0
   rb3_1_2-rs1_41_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.1.2-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -426,6 +448,7 @@ jobs:
         build-args: rust_version=1.41.1
   rb3_1_2-rs1_40_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.1.2-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -445,6 +468,7 @@ jobs:
         build-args: rust_version=1.40.0
   rb3_1_2-rs1_39_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.1.2-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -464,6 +488,7 @@ jobs:
         build-args: rust_version=1.39.0
   rb3_1_2-rs1_38_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.1.2-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -483,6 +508,7 @@ jobs:
         build-args: rust_version=1.38.0
   rb3_0_4-rs1_62_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.0.4-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -502,6 +528,7 @@ jobs:
         build-args: rust_version=1.62.1
   rb3_0_4-rs1_61_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.0.4-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -521,6 +548,7 @@ jobs:
         build-args: rust_version=1.61.0
   rb3_0_4-rs1_60_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.0.4-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -540,6 +568,7 @@ jobs:
         build-args: rust_version=1.60.0
   rb3_0_4-rs1_59_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.0.4-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -559,6 +588,7 @@ jobs:
         build-args: rust_version=1.59.0
   rb3_0_4-rs1_58_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.0.4-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -578,6 +608,7 @@ jobs:
         build-args: rust_version=1.58.1
   rb3_0_4-rs1_57_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.0.4-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -597,6 +628,7 @@ jobs:
         build-args: rust_version=1.57.0
   rb3_0_4-rs1_56_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.0.4-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -616,6 +648,7 @@ jobs:
         build-args: rust_version=1.56.1
   rb3_0_4-rs1_55_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.0.4-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -635,6 +668,7 @@ jobs:
         build-args: rust_version=1.55.0
   rb3_0_4-rs1_54_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.0.4-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -654,6 +688,7 @@ jobs:
         build-args: rust_version=1.54.0
   rb3_0_4-rs1_53_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.0.4-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -673,6 +708,7 @@ jobs:
         build-args: rust_version=1.53.0
   rb3_0_4-rs1_52_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.0.4-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -692,6 +728,7 @@ jobs:
         build-args: rust_version=1.52.1
   rb3_0_4-rs1_51_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.0.4-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -711,6 +748,7 @@ jobs:
         build-args: rust_version=1.51.0
   rb3_0_4-rs1_50_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.0.4-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -730,6 +768,7 @@ jobs:
         build-args: rust_version=1.50.0
   rb3_0_4-rs1_49_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.0.4-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -749,6 +788,7 @@ jobs:
         build-args: rust_version=1.49.0
   rb3_0_4-rs1_48_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.0.4-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -768,6 +808,7 @@ jobs:
         build-args: rust_version=1.48.0
   rb3_0_4-rs1_47_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.0.4-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -787,6 +828,7 @@ jobs:
         build-args: rust_version=1.47.0
   rb3_0_4-rs1_46_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.0.4-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -806,6 +848,7 @@ jobs:
         build-args: rust_version=1.46.0
   rb3_0_4-rs1_45_2:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.0.4-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -825,6 +868,7 @@ jobs:
         build-args: rust_version=1.45.2
   rb3_0_4-rs1_44_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.0.4-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -844,6 +888,7 @@ jobs:
         build-args: rust_version=1.44.1
   rb3_0_4-rs1_43_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.0.4-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -863,6 +908,7 @@ jobs:
         build-args: rust_version=1.43.1
   rb3_0_4-rs1_42_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.0.4-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -882,6 +928,7 @@ jobs:
         build-args: rust_version=1.42.0
   rb3_0_4-rs1_41_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.0.4-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -901,6 +948,7 @@ jobs:
         build-args: rust_version=1.41.1
   rb3_0_4-rs1_40_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.0.4-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -920,6 +968,7 @@ jobs:
         build-args: rust_version=1.40.0
   rb3_0_4-rs1_39_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.0.4-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -939,6 +988,7 @@ jobs:
         build-args: rust_version=1.39.0
   rb3_0_4-rs1_38_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-3.0.4-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -958,6 +1008,7 @@ jobs:
         build-args: rust_version=1.38.0
   rb2_7_6-rs1_62_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.7.6-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -977,6 +1028,7 @@ jobs:
         build-args: rust_version=1.62.1
   rb2_7_6-rs1_61_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.7.6-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -996,6 +1048,7 @@ jobs:
         build-args: rust_version=1.61.0
   rb2_7_6-rs1_60_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.7.6-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1015,6 +1068,7 @@ jobs:
         build-args: rust_version=1.60.0
   rb2_7_6-rs1_59_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.7.6-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1034,6 +1088,7 @@ jobs:
         build-args: rust_version=1.59.0
   rb2_7_6-rs1_58_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.7.6-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1053,6 +1108,7 @@ jobs:
         build-args: rust_version=1.58.1
   rb2_7_6-rs1_57_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.7.6-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1072,6 +1128,7 @@ jobs:
         build-args: rust_version=1.57.0
   rb2_7_6-rs1_56_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.7.6-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1091,6 +1148,7 @@ jobs:
         build-args: rust_version=1.56.1
   rb2_7_6-rs1_55_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.7.6-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1110,6 +1168,7 @@ jobs:
         build-args: rust_version=1.55.0
   rb2_7_6-rs1_54_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.7.6-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1129,6 +1188,7 @@ jobs:
         build-args: rust_version=1.54.0
   rb2_7_6-rs1_53_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.7.6-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1148,6 +1208,7 @@ jobs:
         build-args: rust_version=1.53.0
   rb2_7_6-rs1_52_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.7.6-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1167,6 +1228,7 @@ jobs:
         build-args: rust_version=1.52.1
   rb2_7_6-rs1_51_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.7.6-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1186,6 +1248,7 @@ jobs:
         build-args: rust_version=1.51.0
   rb2_7_6-rs1_50_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.7.6-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1205,6 +1268,7 @@ jobs:
         build-args: rust_version=1.50.0
   rb2_7_6-rs1_49_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.7.6-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1224,6 +1288,7 @@ jobs:
         build-args: rust_version=1.49.0
   rb2_7_6-rs1_48_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.7.6-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1243,6 +1308,7 @@ jobs:
         build-args: rust_version=1.48.0
   rb2_7_6-rs1_47_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.7.6-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1262,6 +1328,7 @@ jobs:
         build-args: rust_version=1.47.0
   rb2_7_6-rs1_46_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.7.6-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1281,6 +1348,7 @@ jobs:
         build-args: rust_version=1.46.0
   rb2_7_6-rs1_45_2:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.7.6-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1300,6 +1368,7 @@ jobs:
         build-args: rust_version=1.45.2
   rb2_7_6-rs1_44_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.7.6-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1319,6 +1388,7 @@ jobs:
         build-args: rust_version=1.44.1
   rb2_7_6-rs1_43_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.7.6-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1338,6 +1408,7 @@ jobs:
         build-args: rust_version=1.43.1
   rb2_7_6-rs1_42_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.7.6-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1357,6 +1428,7 @@ jobs:
         build-args: rust_version=1.42.0
   rb2_7_6-rs1_41_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.7.6-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1376,6 +1448,7 @@ jobs:
         build-args: rust_version=1.41.1
   rb2_7_6-rs1_40_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.7.6-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1395,6 +1468,7 @@ jobs:
         build-args: rust_version=1.40.0
   rb2_7_6-rs1_39_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.7.6-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1414,6 +1488,7 @@ jobs:
         build-args: rust_version=1.39.0
   rb2_7_6-rs1_38_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.7.6-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1433,6 +1508,7 @@ jobs:
         build-args: rust_version=1.38.0
   rb2_6_9-rs1_62_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.6.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1452,6 +1528,7 @@ jobs:
         build-args: rust_version=1.62.1
   rb2_6_9-rs1_61_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.6.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1471,6 +1548,7 @@ jobs:
         build-args: rust_version=1.61.0
   rb2_6_9-rs1_60_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.6.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1490,6 +1568,7 @@ jobs:
         build-args: rust_version=1.60.0
   rb2_6_9-rs1_59_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.6.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1509,6 +1588,7 @@ jobs:
         build-args: rust_version=1.59.0
   rb2_6_9-rs1_58_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.6.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1528,6 +1608,7 @@ jobs:
         build-args: rust_version=1.58.1
   rb2_6_9-rs1_57_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.6.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1547,6 +1628,7 @@ jobs:
         build-args: rust_version=1.57.0
   rb2_6_9-rs1_56_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.6.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1566,6 +1648,7 @@ jobs:
         build-args: rust_version=1.56.1
   rb2_6_9-rs1_55_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.6.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1585,6 +1668,7 @@ jobs:
         build-args: rust_version=1.55.0
   rb2_6_9-rs1_54_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.6.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1604,6 +1688,7 @@ jobs:
         build-args: rust_version=1.54.0
   rb2_6_9-rs1_53_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.6.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1623,6 +1708,7 @@ jobs:
         build-args: rust_version=1.53.0
   rb2_6_9-rs1_52_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.6.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1642,6 +1728,7 @@ jobs:
         build-args: rust_version=1.52.1
   rb2_6_9-rs1_51_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.6.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1661,6 +1748,7 @@ jobs:
         build-args: rust_version=1.51.0
   rb2_6_9-rs1_50_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.6.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1680,6 +1768,7 @@ jobs:
         build-args: rust_version=1.50.0
   rb2_6_9-rs1_49_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.6.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1699,6 +1788,7 @@ jobs:
         build-args: rust_version=1.49.0
   rb2_6_9-rs1_48_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.6.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1718,6 +1808,7 @@ jobs:
         build-args: rust_version=1.48.0
   rb2_6_9-rs1_47_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.6.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1737,6 +1828,7 @@ jobs:
         build-args: rust_version=1.47.0
   rb2_6_9-rs1_46_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.6.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1756,6 +1848,7 @@ jobs:
         build-args: rust_version=1.46.0
   rb2_6_9-rs1_45_2:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.6.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1775,6 +1868,7 @@ jobs:
         build-args: rust_version=1.45.2
   rb2_6_9-rs1_44_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.6.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1794,6 +1888,7 @@ jobs:
         build-args: rust_version=1.44.1
   rb2_6_9-rs1_43_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.6.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1813,6 +1908,7 @@ jobs:
         build-args: rust_version=1.43.1
   rb2_6_9-rs1_42_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.6.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1832,6 +1928,7 @@ jobs:
         build-args: rust_version=1.42.0
   rb2_6_9-rs1_41_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.6.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1851,6 +1948,7 @@ jobs:
         build-args: rust_version=1.41.1
   rb2_6_9-rs1_40_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.6.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1870,6 +1968,7 @@ jobs:
         build-args: rust_version=1.40.0
   rb2_6_9-rs1_39_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.6.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1889,6 +1988,7 @@ jobs:
         build-args: rust_version=1.39.0
   rb2_6_9-rs1_38_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.6.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1908,6 +2008,7 @@ jobs:
         build-args: rust_version=1.38.0
   rb2_5_9-rs1_62_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.5.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1927,6 +2028,7 @@ jobs:
         build-args: rust_version=1.62.1
   rb2_5_9-rs1_61_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.5.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1946,6 +2048,7 @@ jobs:
         build-args: rust_version=1.61.0
   rb2_5_9-rs1_60_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.5.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1965,6 +2068,7 @@ jobs:
         build-args: rust_version=1.60.0
   rb2_5_9-rs1_59_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.5.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -1984,6 +2088,7 @@ jobs:
         build-args: rust_version=1.59.0
   rb2_5_9-rs1_58_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.5.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2003,6 +2108,7 @@ jobs:
         build-args: rust_version=1.58.1
   rb2_5_9-rs1_57_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.5.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2022,6 +2128,7 @@ jobs:
         build-args: rust_version=1.57.0
   rb2_5_9-rs1_56_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.5.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2041,6 +2148,7 @@ jobs:
         build-args: rust_version=1.56.1
   rb2_5_9-rs1_55_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.5.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2060,6 +2168,7 @@ jobs:
         build-args: rust_version=1.55.0
   rb2_5_9-rs1_54_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.5.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2079,6 +2188,7 @@ jobs:
         build-args: rust_version=1.54.0
   rb2_5_9-rs1_53_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.5.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2098,6 +2208,7 @@ jobs:
         build-args: rust_version=1.53.0
   rb2_5_9-rs1_52_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.5.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2117,6 +2228,7 @@ jobs:
         build-args: rust_version=1.52.1
   rb2_5_9-rs1_51_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.5.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2136,6 +2248,7 @@ jobs:
         build-args: rust_version=1.51.0
   rb2_5_9-rs1_50_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.5.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2155,6 +2268,7 @@ jobs:
         build-args: rust_version=1.50.0
   rb2_5_9-rs1_49_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.5.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2174,6 +2288,7 @@ jobs:
         build-args: rust_version=1.49.0
   rb2_5_9-rs1_48_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.5.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2193,6 +2308,7 @@ jobs:
         build-args: rust_version=1.48.0
   rb2_5_9-rs1_47_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.5.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2212,6 +2328,7 @@ jobs:
         build-args: rust_version=1.47.0
   rb2_5_9-rs1_46_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.5.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2231,6 +2348,7 @@ jobs:
         build-args: rust_version=1.46.0
   rb2_5_9-rs1_45_2:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.5.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2250,6 +2368,7 @@ jobs:
         build-args: rust_version=1.45.2
   rb2_5_9-rs1_44_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.5.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2269,6 +2388,7 @@ jobs:
         build-args: rust_version=1.44.1
   rb2_5_9-rs1_43_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.5.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2288,6 +2408,7 @@ jobs:
         build-args: rust_version=1.43.1
   rb2_5_9-rs1_42_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.5.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2307,6 +2428,7 @@ jobs:
         build-args: rust_version=1.42.0
   rb2_5_9-rs1_41_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.5.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2326,6 +2448,7 @@ jobs:
         build-args: rust_version=1.41.1
   rb2_5_9-rs1_40_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.5.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2345,6 +2468,7 @@ jobs:
         build-args: rust_version=1.40.0
   rb2_5_9-rs1_39_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.5.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2364,6 +2488,7 @@ jobs:
         build-args: rust_version=1.39.0
   rb2_5_9-rs1_38_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.5.9-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2383,6 +2508,7 @@ jobs:
         build-args: rust_version=1.38.0
   rb2_4_10-rs1_62_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.4.10-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2402,6 +2528,7 @@ jobs:
         build-args: rust_version=1.62.1
   rb2_4_10-rs1_61_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.4.10-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2421,6 +2548,7 @@ jobs:
         build-args: rust_version=1.61.0
   rb2_4_10-rs1_60_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.4.10-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2440,6 +2568,7 @@ jobs:
         build-args: rust_version=1.60.0
   rb2_4_10-rs1_59_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.4.10-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2459,6 +2588,7 @@ jobs:
         build-args: rust_version=1.59.0
   rb2_4_10-rs1_58_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.4.10-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2478,6 +2608,7 @@ jobs:
         build-args: rust_version=1.58.1
   rb2_4_10-rs1_57_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.4.10-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2497,6 +2628,7 @@ jobs:
         build-args: rust_version=1.57.0
   rb2_4_10-rs1_56_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.4.10-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2516,6 +2648,7 @@ jobs:
         build-args: rust_version=1.56.1
   rb2_4_10-rs1_55_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.4.10-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2535,6 +2668,7 @@ jobs:
         build-args: rust_version=1.55.0
   rb2_4_10-rs1_54_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.4.10-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2554,6 +2688,7 @@ jobs:
         build-args: rust_version=1.54.0
   rb2_4_10-rs1_53_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.4.10-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2573,6 +2708,7 @@ jobs:
         build-args: rust_version=1.53.0
   rb2_4_10-rs1_52_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.4.10-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2592,6 +2728,7 @@ jobs:
         build-args: rust_version=1.52.1
   rb2_4_10-rs1_51_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.4.10-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2611,6 +2748,7 @@ jobs:
         build-args: rust_version=1.51.0
   rb2_4_10-rs1_50_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.4.10-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2630,6 +2768,7 @@ jobs:
         build-args: rust_version=1.50.0
   rb2_4_10-rs1_49_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.4.10-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2649,6 +2788,7 @@ jobs:
         build-args: rust_version=1.49.0
   rb2_4_10-rs1_48_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.4.10-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2668,6 +2808,7 @@ jobs:
         build-args: rust_version=1.48.0
   rb2_4_10-rs1_47_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.4.10-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2687,6 +2828,7 @@ jobs:
         build-args: rust_version=1.47.0
   rb2_4_10-rs1_46_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.4.10-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2706,6 +2848,7 @@ jobs:
         build-args: rust_version=1.46.0
   rb2_4_10-rs1_45_2:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.4.10-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2725,6 +2868,7 @@ jobs:
         build-args: rust_version=1.45.2
   rb2_4_10-rs1_44_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.4.10-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2744,6 +2888,7 @@ jobs:
         build-args: rust_version=1.44.1
   rb2_4_10-rs1_43_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.4.10-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2763,6 +2908,7 @@ jobs:
         build-args: rust_version=1.43.1
   rb2_4_10-rs1_42_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.4.10-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2782,6 +2928,7 @@ jobs:
         build-args: rust_version=1.42.0
   rb2_4_10-rs1_41_1:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.4.10-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2801,6 +2948,7 @@ jobs:
         build-args: rust_version=1.41.1
   rb2_4_10-rs1_40_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.4.10-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2820,6 +2968,7 @@ jobs:
         build-args: rust_version=1.40.0
   rb2_4_10-rs1_39_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.4.10-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2839,6 +2988,7 @@ jobs:
         build-args: rust_version=1.39.0
   rb2_4_10-rs1_38_0:
     runs-on: ubuntu-latest
+    concurrency: ruby-2.4.10-concurrency-group
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -2855,954 +3005,4 @@ jobs:
         context: "."
         push: true
         tags: anirbanmu/circleci-ruby-rust:rb2.4.10-rs1.38.0,anirbanmu/circleci-ruby-rust:rb2.4-rs1.38.0,anirbanmu/circleci-ruby-rust:rb2.4.10-rs1.38,anirbanmu/circleci-ruby-rust:rb2.4-rs1.38
-        build-args: rust_version=1.38.0
-  rb2_3_8-rs1_62_1:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.3.8/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.62.1,anirbanmu/circleci-ruby-rust:rb2.3-rs1.62.1,anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.62,anirbanmu/circleci-ruby-rust:rb2.3-rs1.62
-        build-args: rust_version=1.62.1
-  rb2_3_8-rs1_61_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.3.8/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.61.0,anirbanmu/circleci-ruby-rust:rb2.3-rs1.61.0,anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.61,anirbanmu/circleci-ruby-rust:rb2.3-rs1.61
-        build-args: rust_version=1.61.0
-  rb2_3_8-rs1_60_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.3.8/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.60.0,anirbanmu/circleci-ruby-rust:rb2.3-rs1.60.0,anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.60,anirbanmu/circleci-ruby-rust:rb2.3-rs1.60
-        build-args: rust_version=1.60.0
-  rb2_3_8-rs1_59_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.3.8/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.59.0,anirbanmu/circleci-ruby-rust:rb2.3-rs1.59.0,anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.59,anirbanmu/circleci-ruby-rust:rb2.3-rs1.59
-        build-args: rust_version=1.59.0
-  rb2_3_8-rs1_58_1:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.3.8/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.58.1,anirbanmu/circleci-ruby-rust:rb2.3-rs1.58.1,anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.58,anirbanmu/circleci-ruby-rust:rb2.3-rs1.58
-        build-args: rust_version=1.58.1
-  rb2_3_8-rs1_57_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.3.8/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.57.0,anirbanmu/circleci-ruby-rust:rb2.3-rs1.57.0,anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.57,anirbanmu/circleci-ruby-rust:rb2.3-rs1.57
-        build-args: rust_version=1.57.0
-  rb2_3_8-rs1_56_1:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.3.8/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.56.1,anirbanmu/circleci-ruby-rust:rb2.3-rs1.56.1,anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.56,anirbanmu/circleci-ruby-rust:rb2.3-rs1.56
-        build-args: rust_version=1.56.1
-  rb2_3_8-rs1_55_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.3.8/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.55.0,anirbanmu/circleci-ruby-rust:rb2.3-rs1.55.0,anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.55,anirbanmu/circleci-ruby-rust:rb2.3-rs1.55
-        build-args: rust_version=1.55.0
-  rb2_3_8-rs1_54_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.3.8/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.54.0,anirbanmu/circleci-ruby-rust:rb2.3-rs1.54.0,anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.54,anirbanmu/circleci-ruby-rust:rb2.3-rs1.54
-        build-args: rust_version=1.54.0
-  rb2_3_8-rs1_53_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.3.8/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.53.0,anirbanmu/circleci-ruby-rust:rb2.3-rs1.53.0,anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.53,anirbanmu/circleci-ruby-rust:rb2.3-rs1.53
-        build-args: rust_version=1.53.0
-  rb2_3_8-rs1_52_1:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.3.8/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.52.1,anirbanmu/circleci-ruby-rust:rb2.3-rs1.52.1,anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.52,anirbanmu/circleci-ruby-rust:rb2.3-rs1.52
-        build-args: rust_version=1.52.1
-  rb2_3_8-rs1_51_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.3.8/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.51.0,anirbanmu/circleci-ruby-rust:rb2.3-rs1.51.0,anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.51,anirbanmu/circleci-ruby-rust:rb2.3-rs1.51
-        build-args: rust_version=1.51.0
-  rb2_3_8-rs1_50_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.3.8/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.50.0,anirbanmu/circleci-ruby-rust:rb2.3-rs1.50.0,anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.50,anirbanmu/circleci-ruby-rust:rb2.3-rs1.50
-        build-args: rust_version=1.50.0
-  rb2_3_8-rs1_49_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.3.8/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.49.0,anirbanmu/circleci-ruby-rust:rb2.3-rs1.49.0,anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.49,anirbanmu/circleci-ruby-rust:rb2.3-rs1.49
-        build-args: rust_version=1.49.0
-  rb2_3_8-rs1_48_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.3.8/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.48.0,anirbanmu/circleci-ruby-rust:rb2.3-rs1.48.0,anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.48,anirbanmu/circleci-ruby-rust:rb2.3-rs1.48
-        build-args: rust_version=1.48.0
-  rb2_3_8-rs1_47_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.3.8/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.47.0,anirbanmu/circleci-ruby-rust:rb2.3-rs1.47.0,anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.47,anirbanmu/circleci-ruby-rust:rb2.3-rs1.47
-        build-args: rust_version=1.47.0
-  rb2_3_8-rs1_46_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.3.8/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.46.0,anirbanmu/circleci-ruby-rust:rb2.3-rs1.46.0,anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.46,anirbanmu/circleci-ruby-rust:rb2.3-rs1.46
-        build-args: rust_version=1.46.0
-  rb2_3_8-rs1_45_2:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.3.8/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.45.2,anirbanmu/circleci-ruby-rust:rb2.3-rs1.45.2,anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.45,anirbanmu/circleci-ruby-rust:rb2.3-rs1.45
-        build-args: rust_version=1.45.2
-  rb2_3_8-rs1_44_1:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.3.8/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.44.1,anirbanmu/circleci-ruby-rust:rb2.3-rs1.44.1,anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.44,anirbanmu/circleci-ruby-rust:rb2.3-rs1.44
-        build-args: rust_version=1.44.1
-  rb2_3_8-rs1_43_1:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.3.8/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.43.1,anirbanmu/circleci-ruby-rust:rb2.3-rs1.43.1,anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.43,anirbanmu/circleci-ruby-rust:rb2.3-rs1.43
-        build-args: rust_version=1.43.1
-  rb2_3_8-rs1_42_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.3.8/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.42.0,anirbanmu/circleci-ruby-rust:rb2.3-rs1.42.0,anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.42,anirbanmu/circleci-ruby-rust:rb2.3-rs1.42
-        build-args: rust_version=1.42.0
-  rb2_3_8-rs1_41_1:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.3.8/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.41.1,anirbanmu/circleci-ruby-rust:rb2.3-rs1.41.1,anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.41,anirbanmu/circleci-ruby-rust:rb2.3-rs1.41
-        build-args: rust_version=1.41.1
-  rb2_3_8-rs1_40_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.3.8/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.40.0,anirbanmu/circleci-ruby-rust:rb2.3-rs1.40.0,anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.40,anirbanmu/circleci-ruby-rust:rb2.3-rs1.40
-        build-args: rust_version=1.40.0
-  rb2_3_8-rs1_39_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.3.8/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.39.0,anirbanmu/circleci-ruby-rust:rb2.3-rs1.39.0,anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.39,anirbanmu/circleci-ruby-rust:rb2.3-rs1.39
-        build-args: rust_version=1.39.0
-  rb2_3_8-rs1_38_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.3.8/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.38.0,anirbanmu/circleci-ruby-rust:rb2.3-rs1.38.0,anirbanmu/circleci-ruby-rust:rb2.3.8-rs1.38,anirbanmu/circleci-ruby-rust:rb2.3-rs1.38
-        build-args: rust_version=1.38.0
-  rb2_2_10-rs1_62_1:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.2.10/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.62.1,anirbanmu/circleci-ruby-rust:rb2.2-rs1.62.1,anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.62,anirbanmu/circleci-ruby-rust:rb2.2-rs1.62
-        build-args: rust_version=1.62.1
-  rb2_2_10-rs1_61_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.2.10/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.61.0,anirbanmu/circleci-ruby-rust:rb2.2-rs1.61.0,anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.61,anirbanmu/circleci-ruby-rust:rb2.2-rs1.61
-        build-args: rust_version=1.61.0
-  rb2_2_10-rs1_60_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.2.10/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.60.0,anirbanmu/circleci-ruby-rust:rb2.2-rs1.60.0,anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.60,anirbanmu/circleci-ruby-rust:rb2.2-rs1.60
-        build-args: rust_version=1.60.0
-  rb2_2_10-rs1_59_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.2.10/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.59.0,anirbanmu/circleci-ruby-rust:rb2.2-rs1.59.0,anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.59,anirbanmu/circleci-ruby-rust:rb2.2-rs1.59
-        build-args: rust_version=1.59.0
-  rb2_2_10-rs1_58_1:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.2.10/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.58.1,anirbanmu/circleci-ruby-rust:rb2.2-rs1.58.1,anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.58,anirbanmu/circleci-ruby-rust:rb2.2-rs1.58
-        build-args: rust_version=1.58.1
-  rb2_2_10-rs1_57_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.2.10/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.57.0,anirbanmu/circleci-ruby-rust:rb2.2-rs1.57.0,anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.57,anirbanmu/circleci-ruby-rust:rb2.2-rs1.57
-        build-args: rust_version=1.57.0
-  rb2_2_10-rs1_56_1:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.2.10/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.56.1,anirbanmu/circleci-ruby-rust:rb2.2-rs1.56.1,anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.56,anirbanmu/circleci-ruby-rust:rb2.2-rs1.56
-        build-args: rust_version=1.56.1
-  rb2_2_10-rs1_55_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.2.10/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.55.0,anirbanmu/circleci-ruby-rust:rb2.2-rs1.55.0,anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.55,anirbanmu/circleci-ruby-rust:rb2.2-rs1.55
-        build-args: rust_version=1.55.0
-  rb2_2_10-rs1_54_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.2.10/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.54.0,anirbanmu/circleci-ruby-rust:rb2.2-rs1.54.0,anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.54,anirbanmu/circleci-ruby-rust:rb2.2-rs1.54
-        build-args: rust_version=1.54.0
-  rb2_2_10-rs1_53_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.2.10/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.53.0,anirbanmu/circleci-ruby-rust:rb2.2-rs1.53.0,anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.53,anirbanmu/circleci-ruby-rust:rb2.2-rs1.53
-        build-args: rust_version=1.53.0
-  rb2_2_10-rs1_52_1:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.2.10/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.52.1,anirbanmu/circleci-ruby-rust:rb2.2-rs1.52.1,anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.52,anirbanmu/circleci-ruby-rust:rb2.2-rs1.52
-        build-args: rust_version=1.52.1
-  rb2_2_10-rs1_51_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.2.10/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.51.0,anirbanmu/circleci-ruby-rust:rb2.2-rs1.51.0,anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.51,anirbanmu/circleci-ruby-rust:rb2.2-rs1.51
-        build-args: rust_version=1.51.0
-  rb2_2_10-rs1_50_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.2.10/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.50.0,anirbanmu/circleci-ruby-rust:rb2.2-rs1.50.0,anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.50,anirbanmu/circleci-ruby-rust:rb2.2-rs1.50
-        build-args: rust_version=1.50.0
-  rb2_2_10-rs1_49_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.2.10/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.49.0,anirbanmu/circleci-ruby-rust:rb2.2-rs1.49.0,anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.49,anirbanmu/circleci-ruby-rust:rb2.2-rs1.49
-        build-args: rust_version=1.49.0
-  rb2_2_10-rs1_48_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.2.10/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.48.0,anirbanmu/circleci-ruby-rust:rb2.2-rs1.48.0,anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.48,anirbanmu/circleci-ruby-rust:rb2.2-rs1.48
-        build-args: rust_version=1.48.0
-  rb2_2_10-rs1_47_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.2.10/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.47.0,anirbanmu/circleci-ruby-rust:rb2.2-rs1.47.0,anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.47,anirbanmu/circleci-ruby-rust:rb2.2-rs1.47
-        build-args: rust_version=1.47.0
-  rb2_2_10-rs1_46_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.2.10/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.46.0,anirbanmu/circleci-ruby-rust:rb2.2-rs1.46.0,anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.46,anirbanmu/circleci-ruby-rust:rb2.2-rs1.46
-        build-args: rust_version=1.46.0
-  rb2_2_10-rs1_45_2:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.2.10/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.45.2,anirbanmu/circleci-ruby-rust:rb2.2-rs1.45.2,anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.45,anirbanmu/circleci-ruby-rust:rb2.2-rs1.45
-        build-args: rust_version=1.45.2
-  rb2_2_10-rs1_44_1:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.2.10/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.44.1,anirbanmu/circleci-ruby-rust:rb2.2-rs1.44.1,anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.44,anirbanmu/circleci-ruby-rust:rb2.2-rs1.44
-        build-args: rust_version=1.44.1
-  rb2_2_10-rs1_43_1:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.2.10/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.43.1,anirbanmu/circleci-ruby-rust:rb2.2-rs1.43.1,anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.43,anirbanmu/circleci-ruby-rust:rb2.2-rs1.43
-        build-args: rust_version=1.43.1
-  rb2_2_10-rs1_42_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.2.10/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.42.0,anirbanmu/circleci-ruby-rust:rb2.2-rs1.42.0,anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.42,anirbanmu/circleci-ruby-rust:rb2.2-rs1.42
-        build-args: rust_version=1.42.0
-  rb2_2_10-rs1_41_1:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.2.10/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.41.1,anirbanmu/circleci-ruby-rust:rb2.2-rs1.41.1,anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.41,anirbanmu/circleci-ruby-rust:rb2.2-rs1.41
-        build-args: rust_version=1.41.1
-  rb2_2_10-rs1_40_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.2.10/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.40.0,anirbanmu/circleci-ruby-rust:rb2.2-rs1.40.0,anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.40,anirbanmu/circleci-ruby-rust:rb2.2-rs1.40
-        build-args: rust_version=1.40.0
-  rb2_2_10-rs1_39_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.2.10/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.39.0,anirbanmu/circleci-ruby-rust:rb2.2-rs1.39.0,anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.39,anirbanmu/circleci-ruby-rust:rb2.2-rs1.39
-        build-args: rust_version=1.39.0
-  rb2_2_10-rs1_38_0:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: docker/setup-qemu-action@v2
-    - uses: docker/setup-buildx-action@v2
-    - uses: docker/login-action@v2
-      with:
-        username: "${{ secrets.DOCKERHUB_USERNAME }}"
-        password: "${{ secrets.DOCKERHUB_TOKEN }}"
-    - name: Generate dockerfile
-      run: sed "s/REPLACE_ME_WITH_RIGHT_CIRCLE_IMAGE/cimg\/ruby:2.2.10/" Dockerfile.template
-        > Dockerfile
-    - uses: docker/build-push-action@v3
-      with:
-        context: "."
-        push: true
-        tags: anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.38.0,anirbanmu/circleci-ruby-rust:rb2.2-rs1.38.0,anirbanmu/circleci-ruby-rust:rb2.2.10-rs1.38,anirbanmu/circleci-ruby-rust:rb2.2-rs1.38
         build-args: rust_version=1.38.0
